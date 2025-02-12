@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.usersapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.usersapp"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -60,4 +60,7 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    implementation "com.github.bumptech.glide:compose:1.0.0-beta01"
+    implementation 'com.google.code.gson:gson:2.11.0'
+
 }

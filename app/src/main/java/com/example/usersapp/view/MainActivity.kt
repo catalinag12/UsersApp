@@ -1,4 +1,4 @@
-package com.example.usersapp
+package com.example.usersapp.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
