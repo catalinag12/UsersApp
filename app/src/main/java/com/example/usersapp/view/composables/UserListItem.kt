@@ -37,7 +37,9 @@ fun UserListItem(
         mutableStateOf(false)
     }
 
-    Column {
+    Column(
+        modifier = Modifier.padding(top = 8.dp)
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -47,7 +49,7 @@ fun UserListItem(
             GlideImage(
                 modifier = Modifier
                     .clip(CircleShape)
-                    .size(40.dp),
+                    .size(50.dp),
                 model = if (isPreview) R.drawable.ic_launcher_background else imageUrl,
                 contentDescription = "user image",
                 loading = placeholder(R.drawable.ic_launcher_background),
@@ -90,8 +92,8 @@ fun UserListItem(
             }
         }
         Divider(
-            color = Color.Gray,
-            thickness = 2.dp
+            color = Color.LightGray,
+            thickness = 1.dp
         )
     }
 }

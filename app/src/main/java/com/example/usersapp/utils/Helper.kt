@@ -1,6 +1,6 @@
 package com.example.usersapp.utils
 
-import java.time.Instant
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -9,7 +9,7 @@ internal fun getCountryCode(countryName: String) =
         Locale("", it).displayCountry == countryName
     }
 
-internal fun Instant.formatTime(): String {
-    val formatter = DateTimeFormatter.ofPattern("hh:mm", Locale.getDefault())
-    return formatter.format(this)
+internal fun formatTime(): String {
+    val formatter = DateTimeFormatter.ofPattern("hh:mm")
+    return LocalDateTime.now().format(formatter)
 }

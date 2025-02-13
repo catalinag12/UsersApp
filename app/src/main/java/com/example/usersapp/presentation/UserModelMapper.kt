@@ -7,5 +7,5 @@ internal fun User.toPresentation(): UserPresentation = UserPresentation(
     fullName = fullName,
     details = "$age years from $countryCode",
     picture = picture,
-    formattedTimestamp = timestamp.formatTime()
+    formattedTimestamp = formatTime()
 )
