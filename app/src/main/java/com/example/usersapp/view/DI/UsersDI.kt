@@ -14,10 +14,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-
 @Component(
     modules = [NetworkingModule::class, DataModule::class]
 )
+@Singleton
 interface UserComponent {
     fun inject(target: MainActivity)
 }
@@ -37,8 +37,8 @@ internal class DataModule {
 @Module
 internal class NetworkingModule {
 
-    //  @Singleton
     @Provides
+    @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://randomuser.me/")
