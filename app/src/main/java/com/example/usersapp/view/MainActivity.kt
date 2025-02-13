@@ -3,7 +3,7 @@ package com.example.usersapp.view
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.usersapp.presentation.UserViewModelFactory
+import com.example.usersapp.presentation.viewModel.UserViewModelFactory
 import com.example.usersapp.ui.theme.UsersAppTheme
 import com.example.usersapp.view.DI.DaggerUserComponent
 import com.example.usersapp.view.composables.UserListDestination

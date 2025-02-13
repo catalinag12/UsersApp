@@ -3,8 +3,8 @@ package com.example.usersapp.data
 import com.google.gson.annotations.SerializedName
 
 data class UserResults(
-@SerializedName("results")
-val userResults: List<UserRemote>
+    @SerializedName("results")
+    val userResults: List<UserRemote>
 )
 
 data class Name(

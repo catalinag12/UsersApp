@@ -37,7 +37,7 @@ internal class DataModule {
 @Module
 internal class NetworkingModule {
 
-  //  @Singleton
+    //  @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
@@ -47,6 +47,6 @@ internal class NetworkingModule {
     }
 
     @Provides
-    fun provideApi(retrofit: Retrofit) : UserRemoteSource =
+    fun provideApi(retrofit: Retrofit): UserRemoteSource =
         retrofit.create(UserRemoteSource::class.java)
 }

@@ -40,7 +40,7 @@ fun UserListDestination(
         ViewState.Loading -> {
             LoadingItem()
         }
-
+        else -> {}
     }
 }
 

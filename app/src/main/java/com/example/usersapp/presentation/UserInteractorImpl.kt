@@ -16,6 +16,5 @@ class UserInteractorImpl @Inject constructor(
 ) : UserInteractor {
     override fun getUsers(): Flow<List<UserPresentation>> =
         getUsersUseCase.execute().map { it.map(User::toPresentation) }
-
 }
 
