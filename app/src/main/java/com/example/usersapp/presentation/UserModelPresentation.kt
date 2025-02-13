@@ -1,4 +1,8 @@
 package com.example.usersapp.presentation
 
-class UserModelPresentation {
-}
+data class UserPresentation(
+    val fullName: String,
+    val details: String,
+    val picture: String,
+    val formattedTimestamp: String,
+)
