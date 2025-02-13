@@ -6,7 +6,7 @@ import javax.inject.Inject
 class GetUsersUseCase @Inject constructor(
     private val repository: UserRepository
 ) {
-    fun execute(): Flow<List<User>> {
-        return repository.getUsers()
+    fun execute(page: Int): Flow<List<User>> {
+        return repository.getUsers(page)
     }
 }

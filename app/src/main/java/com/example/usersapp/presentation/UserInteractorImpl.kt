@@ -8,13 +8,13 @@ import javax.inject.Inject
 
 
 interface UserInteractor {
-    fun getUsers(): Flow<List<UserPresentation>>
+    fun getUsers(page: Int): Flow<List<UserPresentation>>
 }
 
 class UserInteractorImpl @Inject constructor(
     private val getUsersUseCase: GetUsersUseCase
 ) : UserInteractor {
-    override fun getUsers(): Flow<List<UserPresentation>> =
-        getUsersUseCase.execute().map { it.map(User::toPresentation) }
+    override fun getUsers(page: Int): Flow<List<UserPresentation>> =
+        getUsersUseCase.execute(page).map { it.map(User::toPresentation) }
 }
 
