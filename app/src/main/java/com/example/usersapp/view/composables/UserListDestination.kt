@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
@@ -18,6 +19,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.usersapp.presentation.UserPresentation
 import com.example.usersapp.presentation.UserViewModel
 import com.example.usersapp.presentation.ViewState
+import okhttp3.internal.wait
 import kotlin.random.Random
 
 @Composable
@@ -83,7 +85,20 @@ fun UserListScreen(
                     }
                 }
             )
-        }
+        },
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { },
+                containerColor = Color(0xFFBD3F34),
+                contentColor = Color.White
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Edit,
+                    contentDescription = "edit"
+                )
+            }
+        },
+        floatingActionButtonPosition = FabPosition.End
     ) { padding ->
         LazyColumn(
             contentPadding = padding
